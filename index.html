@@ -38,7 +38,7 @@
     header h1 {
       margin: 0;
       font-size: 6rem;
-      font-weight: regular;
+      font-weight: normal;
       letter-spacing: 2px;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
       font-family: 'Acknowledge', serif;
@@ -65,11 +65,11 @@
     }
 
     main {
-      max-width: 900px;
-      margin: auto;
+      width: 100%;
       padding: 2rem;
       position: relative;
       z-index: 1;
+      box-sizing: border-box;
     }
 
     main::before {
@@ -82,7 +82,7 @@
       height: 90vw;
       max-width: 1200px;
       max-height: 1200px;
-      background-image: url('Asthaproject.png'); /* <- Hier dein Logo-Dateiname */
+      background-image: url('Asthaproject.png');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
@@ -93,6 +93,8 @@
 
     section {
       margin-bottom: 4rem;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     h2 {
@@ -112,6 +114,8 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
       margin-bottom: 2.5rem;
       transition: transform 0.3s ease, background 0.3s ease;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .project:hover {
