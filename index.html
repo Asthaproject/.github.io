@@ -13,6 +13,12 @@
       --gradient-end: hsl(228, 11%, 9%);
     }
 
+    @font-face {
+      font-family: 'Acknowledge';
+      src: url('acknowtt.ttf') format('truetype');
+      font-display: swap;
+    }
+
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
@@ -31,11 +37,11 @@
 
     header h1 {
       margin: 0;
-      font-size: 3rem;
-      font-weight: bold;
+      font-size: 6rem;
+      font-weight: regular;
       letter-spacing: 2px;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-      font-family: 'Cinzel', serif;
+      font-family: 'Acknowledge', serif;
     }
 
     nav {
@@ -68,12 +74,12 @@
 
     main::before {
       content: "";
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 500px;
-      height: 500px;
+      width: 1200px;
+      height: 1200px;
       background-image: url('Asthaproject.png'); /* <- Hier dein Logo-Dateiname */
       background-repeat: no-repeat;
       background-size: contain;
@@ -139,7 +145,6 @@
 <body>
   <header>
     <h1>AsthaProject</h1>
-    <p>Kreative Spiele mit Charakter</p>
   </header>
 
   <nav>
