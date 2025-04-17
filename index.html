@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mein Game Studio</title>
+  <title>AsthaProject</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #fefefe;
-      --text: #222;
-      --accent: #4CAF50;
+      --text: #fefefe;
+      --accent: #a48730;
+      --gradient-start: hsl(218, 39%, 19%);
+      --gradient-end: hsl(228, 11%, 9%);
     }
 
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--bg);
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom right, var(--gradient-start), var(--gradient-end));
       color: var(--text);
       line-height: 1.6;
     }
@@ -26,18 +28,25 @@
       text-align: center;
     }
 
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
     nav {
       display: flex;
       justify-content: center;
       gap: 2rem;
-      background: #eee;
+      background: rgba(255, 255, 255, 0.1);
       padding: 1rem;
+      backdrop-filter: blur(4px);
     }
 
     nav a {
       text-decoration: none;
       color: var(--text);
       font-weight: bold;
+      transition: color 0.3s;
     }
 
     nav a:hover {
@@ -54,7 +63,43 @@
       margin-bottom: 4rem;
     }
 
-    h1, h2 {
+    h2 {
+      font-family: 'Cinzel', serif;
+      color: var(--accent);
+      font-size: 1.8rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .project {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      margin-bottom: 2.5rem;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .project-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .project a {
+      color: var(--text);
+      text-decoration: underline;
+      transition: color 0.3s;
+    }
+
+    .project a:hover {
       color: var(--accent);
     }
 
@@ -62,14 +107,14 @@
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
-      background: #fafafa;
-      border-top: 1px solid #ddd;
+      background: rgba(255, 255, 255, 0.05);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Willkommen bei meinem Indie Game Studio</h1>
+    <h1>AsthaProject</h1>
     <p>Kreative Spiele mit Charakter</p>
   </header>
 
@@ -83,16 +128,33 @@
   <main>
     <section id="about">
       <h2>Wer bin ich?</h2>
-      <p>Ich bin ein Solo-Entwickler mit Leidenschaft für Strategie, Humor und einzigartige Ideen. Seit [Jahr] entwickle ich Indie-Games mit Unity, Pixelkunst und viel Herzblut.</p>
+      <p>Ich bin ein kreativer Solo-Entwickler, der alles rund ums Game Development liebt – von der ersten Idee bis zur fertigen Umsetzung. Ob Pixel-Art, 3D mit Blender oder einfach nur wildes Rumprobieren: Ich mixe Stile, Tools und Konzepte, wie’s zum Spiel passt.</p>
+      <p>Was am Ende zählt? Ein Projekt mit Charakter, das Spaß macht und im Kopf bleibt. Ich bastle ständig an neuen Ideen und bin immer offen für Neues – Hauptsache es wird kreativ.</p>
     </section>
 
     <section id="done">
       <h2>Was habe ich gemacht?</h2>
-      <ul>
-        <li><strong>Captain Energy</strong> – Ein humorvoller Slapstick-Platformer im Comic-Stil</li>
-        <li><strong>Gemüse vs. Köche</strong> – Rundenstrategie mit abgedrehtem Setting</li>
-        <li><em>Mehr Projekte folgen...</em></li>
-      </ul>
+
+      <div class="project">
+        <div class="project-title">We are Football</div>
+        <p>Ist ein Fußball-Manager Spiel der klassischen Schule, geleitet von Gerald Köhler (Anstoss-Reihe).</p>
+        <p><strong>Meine Aufgabe:</strong> Programmierung</p>
+        <p><strong>Link:</strong> <a href="https://store.steampowered.com/app/1196470/WE_ARE_FOOTBALL/">Steam</a></p>
+      </div>
+
+      <div class="project">
+        <div class="project-title">The Innsmouth Case</div>
+        <p>Ist ein komödiantisches Text-Adventure-Spiel, inspiriert von den fantastischen Werken der Horrorlegende H.P. Lovecraft.</p>
+        <p><strong>Meine Aufgabe:</strong> Programmierung, Musik-Komposition, Sound-Design</p>
+        <p><strong>Link:</strong> <a href="https://store.steampowered.com/app/1231950/The_Innsmouth_Case/">Steam</a></p>
+      </div>
+
+      <div class="project">
+        <div class="project-title">Plan B from Outer Space</div>
+        <p>Ist ein intergalaktisches Comedy-Abenteuer im Stil eines interaktiven Buches.</p>
+        <p><strong>Meine Aufgabe:</strong> Programmierung, Musik-Komposition, Sound-Design</p>
+        <p><strong>Link:</strong> <a href="https://store.steampowered.com/app/1683620/Plan_B_from_Outer_Space_A_Bavarian_Odyssey/">Steam</a></p>
+      </div>
     </section>
 
     <section id="current">
@@ -103,12 +165,12 @@
     <section id="contact">
       <h2>Kontakt</h2>
       <p>Du willst mehr erfahren, zusammenarbeiten oder Feedback geben?</p>
-      <p>📧 <a href="mailto:deinemail@example.com">deinemail@example.com</a></p>
+      <p>📧 <a href="mailto:AsthaProject@proton.me">AsthaProject@proton.me</a></p>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 Mein Game Studio. Alle Rechte vorbehalten.
+    &copy; 2025 AsthaProject. Alle Rechte vorbehalten.
   </footer>
 </body>
 </html>
