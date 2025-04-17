@@ -597,22 +597,30 @@
     });
   </script>
   <script>
-    let currentLang = 'de';
+    let currentLang = localStorage.getItem('lang') || 'de';
 
-    function toggleLanguage() {
-      currentLang = (currentLang === 'de') ? 'en' : 'de';
-      document.getElementById('langSwitch').innerText = currentLang === 'de' ? 'EN' : 'DE';
-
+    function applyLanguage(lang) {
       const langElements = document.querySelectorAll('[data-lang]');
-
       langElements.forEach(el => {
-        if (el.getAttribute('data-lang') === currentLang) {
+        if (el.getAttribute('data-lang') === lang) {
           el.style.display = '';
         } else {
           el.style.display = 'none';
         }
       });
+
+      document.getElementById('langSwitch').innerText = lang === 'de' ? 'EN' : 'DE';
     }
+
+    function toggleLanguage() {
+      currentLang = (currentLang === 'de') ? 'en' : 'de';
+      localStorage.setItem('lang', currentLang);
+      applyLanguage(currentLang);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      applyLanguage(currentLang);
+    });
   </script>
 </body>
 </html>
