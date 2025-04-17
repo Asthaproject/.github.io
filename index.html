@@ -1,11 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Willkommen auf meiner Spiele-Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mein Game Studio</title>
+  <style>
+    :root {
+      --bg: #fefefe;
+      --text: #222;
+      --accent: #4CAF50;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--accent);
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #eee;
+      padding: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    h1, h2 {
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: #fafafa;
+      border-top: 1px solid #ddd;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hallo, ich bin ein Indie-Entwickler!</h1>
-  <p>Hier präsentiere ich meine Spieleprojekte.</p>
+  <header>
+    <h1>Willkommen bei meinem Indie Game Studio</h1>
+    <p>Kreative Spiele mit Charakter</p>
+  </header>
+
+  <nav>
+    <a href="#about">Wer bin ich?</a>
+    <a href="#done">Was habe ich gemacht?</a>
+    <a href="#current">Was wird gerade gemacht?</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>Wer bin ich?</h2>
+      <p>Ich bin ein Solo-Entwickler mit Leidenschaft für Strategie, Humor und einzigartige Ideen. Seit [Jahr] entwickle ich Indie-Games mit Unity, Pixelkunst und viel Herzblut.</p>
+    </section>
+
+    <section id="done">
+      <h2>Was habe ich gemacht?</h2>
+      <ul>
+        <li><strong>Captain Energy</strong> – Ein humorvoller Slapstick-Platformer im Comic-Stil</li>
+        <li><strong>Gemüse vs. Köche</strong> – Rundenstrategie mit abgedrehtem Setting</li>
+        <li><em>Mehr Projekte folgen...</em></li>
+      </ul>
+    </section>
+
+    <section id="current">
+      <h2>Was wird gerade gemacht?</h2>
+      <p>Aktuell arbeite ich an einem neuen Multiplayer-Rundenstrategiespiel mit asymmetrischem Gameplay, einzigartigen Kartenmechaniken und thematisch verrückten Teams.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Kontakt</h2>
+      <p>Du willst mehr erfahren, zusammenarbeiten oder Feedback geben?</p>
+      <p>📧 <a href="mailto:deinemail@example.com">deinemail@example.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Mein Game Studio. Alle Rechte vorbehalten.
+  </footer>
 </body>
 </html>
