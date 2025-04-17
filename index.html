@@ -187,15 +187,10 @@
             <p>Fußball-Manager im Geiste der Anstoss-Reihe</p>
             <p><strong>Meine Aufgabe:</strong> Programmierung</p>
             <a href="https://store.steampowered.com/app/1196470/WE_ARE_FOOTBALL/">Steam</a>
-            <div class="swiper inner-gallery">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="Images\WAF_001.jpg" onclick="openLightbox(this.src)" /></div>
-                <div class="swiper-slide"><img src="Images\WAF_002.jpg" onclick="openLightbox(this.src)" /></div>
-                <div class="swiper-slide"><img src="Images\WAF_003.jpg" onclick="openLightbox(this.src)" /></div>
-                <div class="swiper-slide"><img src="Images\WAF_004.jpg" onclick="openLightbox(this.src)" /></div>
-                <div class="swiper-slide"><img src="Images\WAF_005.jpg" onclick="openLightbox(this.src)" /></div>
-                <div class="swiper-slide"><img src="Images\WAF_006.jpg" onclick="openLightbox(this.src)" /></div>
-              </div>
+            <div class="image-gallery">
+              <img src="Images\WAF_001.jpg" onclick="openLightbox(this.src)" />
+              <img src="Images\WAF_002.jpg" onclick="openLightbox(this.src)" />
+              <img src="Images\WAF_003.jpg" onclick="openLightbox(this.src)" />
             </div>
           </div>
     
@@ -204,15 +199,10 @@
             <p>Komödiantisches Text-Adventure mit Lovecraft-Charme</p>
             <p><strong>Meine Aufgabe:</strong> Code, Musik, Sound</p>
             <a href="https://store.steampowered.com/app/1231950/The_Innsmouth_Case/">Steam</a>
-            <div class="swiper inner-gallery">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="Images\TIC_001.jpg" onclick="openLightbox(this.src)" /></div>
-                <div class="swiper-slide"><img src="Images\TIC_002.jpg" onclick="openLightbox(this.src)" /></div>
-                <div class="swiper-slide"><img src="Images\TIC_003.jpg" onclick="openLightbox(this.src)" /></div>
-                <div class="swiper-slide"><img src="Images\TIC_004.jpg" onclick="openLightbox(this.src)" /></div>
-                <div class="swiper-slide"><img src="Images\TIC_005.jpg" onclick="openLightbox(this.src)" /></div>
-                <div class="swiper-slide"><img src="Images\TIC_006.jpg" onclick="openLightbox(this.src)" /></div>
-              </div>
+            <div class="image-gallery">
+              <img src="Images\TIC_001.jpg" onclick="openLightbox(this.src)" />
+              <img src="Images\TIC_002.jpg" onclick="openLightbox(this.src)" />
+              <img src="Images\TIC_003.jpg" onclick="openLightbox(this.src)" />
             </div>
           </div>
     
@@ -221,15 +211,10 @@
             <p>Interaktives Sci-Fi-Buch mit bayerischem Witz</p>
             <p><strong>Meine Aufgabe:</strong> Code, Musik, Sound</p>
             <a href="https://store.steampowered.com/app/1683620/Plan_B_from_Outer_Space_A_Bavarian_Odyssey/">Steam</a>
-            <div class="swiper inner-gallery">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="Images\PBFOS_001.jpg" onclick="openLightbox(this.src)" /></div>
-                <div class="swiper-slide"><img src="Images\PBFOS_002.jpg" onclick="openLightbox(this.src)" /></div>
-                <div class="swiper-slide"><img src="Images\PBFOS_003.jpg" onclick="openLightbox(this.src)" /></div>
-                <div class="swiper-slide"><img src="Images\PBFOS_004.jpg" onclick="openLightbox(this.src)" /></div>
-                <div class="swiper-slide"><img src="Images\PBFOS_005.jpg" onclick="openLightbox(this.src)" /></div>
-                <div class="swiper-slide"><img src="Images\PBFOS_006.jpg" onclick="openLightbox(this.src)" /></div>
-              </div>
+            <div class="image-gallery">
+              <img src="Images\PBFOS_001.jpg" onclick="openLightbox(this.src)" />
+              <img src="Images\PBFOS_002.jpg" onclick="openLightbox(this.src)" />
+              <img src="Images\PBFOS_003.jpg" onclick="openLightbox(this.src)" />
             </div>
           </div>
     
@@ -257,7 +242,27 @@
           lightboxImg.src = "";
         };
       </script>
+      <style>
+        .image-gallery {
+          display: flex;
+          gap: 0.5rem;
+          margin-top: 1rem;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        .image-gallery img {
+          height: 80px;
+          object-fit: cover;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: transform 0.2s;
+        }
+        .image-gallery img:hover {
+          transform: scale(1.05);
+        }
+      </style>
     </section>
+    
 
     <section id="contact">
       <h2>Kontakt</h2>
