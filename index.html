@@ -168,6 +168,22 @@
       justify-content: space-between;
       width: 100%;
     }
+
+    nav button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav button:hover {
+      background: #c9aa4a;
+    }
+
   </style>
 </head>
 <body>
@@ -176,22 +192,42 @@
   </header>
 
   <nav>
-    <a href="#about">Wer bin ich?</a>
-    <a href="#current">Was wird gerade gemacht?</a>
-    <a href="#done">Was habe ich gemacht?</a>
-    <a href="#contact">Kontakt</a>
-    <a href="#impressum">Impressum</a>
+    <a href="#about" data-lang="de">Wer bin ich?</a>
+    <a href="#about" data-lang="en" style="display: none;">Who am I?</a>
+    <a href="#current" data-lang="de">Was wird gerade gemacht?</a>
+    <a href="#current" data-lang="en" style="display: none;">What is currently being developed?</a>
+    <a href="#done" data-lang="de">Was habe ich gemacht?</a>
+    <a href="#done" data-lang="en">What have I made?</a>
+    <a href="#contact" data-lang="de">Kontakt</a>
+    <a href="#contact" data-lang="en">Contact</a>
+    <a href="#impressum" data-lang="de">Impressum</a>
+    <a href="#impressum" data-lang="en">Legal Notice</a>
+    <button onclick="toggleLanguage()" id="langSwitch" style="margin-left: auto;">
+      EN
+    </button>
   </nav>
 
   <main>
     <section id="about">
-      <h2>Wer bin ich?</h2>
-      <p>Ich bin ein kreativer Solo-Entwickler, der alles rund ums Game Development liebt – von der ersten Idee bis zur fertigen Umsetzung. Ob Pixel-Art, 3D mit Blender oder einfach nur wildes Rumprobieren: Ich mixe Stile, Tools und Konzepte, wie’s zum Spiel passt.</p>
-      <p>Was am Ende zählt? Ein Projekt mit Charakter, das Spaß macht und im Kopf bleibt. Ich bastle ständig an neuen Ideen und bin immer offen für Neues – Hauptsache es wird kreativ.</p>
+      <h2 data-lang="de">Wer bin ich?</h2>
+      <h2 data-lang="en" style="display: none;">Who am I?</h2>
+      <p data-lang="de">
+        Ich bin ein kreativer Solo-Entwickler, der alles rund ums Game Development liebt – von der ersten Idee bis zur fertigen Umsetzung.
+        Ob Pixel-Art, 3D mit Blender oder einfach nur wildes Rumprobieren: Ich mixe Stile, Tools und Konzepte, wie’s zum Spiel passt.
+        Was am Ende zählt? Ein Projekt mit Charakter, das Spaß macht und im Kopf bleibt.
+        Ich bastle ständig an neuen Ideen und bin immer offen für Neues – Hauptsache es wird kreativ.
+      </p>
+      <p data-lang="en" style="display: none;">
+        I'm a creative solo developer who loves everything about game development – from the first idea to the final execution.
+        Whether it's pixel art, 3D with Blender, or just wild experimentation: I mix styles, tools, and concepts to suit the game.
+        What matters in the end? A project with personality that’s fun and memorable.
+        I'm always tinkering with new ideas and open to anything – as long as it’s creative.
+      </p>
     </section>
     
     <section id="current">
-      <h2>Was wird gerade gemacht?</h2>
+      <h2 data-lang="de">Was wird gerade gemacht?</h2>
+      <h2 data-lang="en" style="display: none;">What is currently being developed?</h2>
       <div class="swiper swiper-current">
         <div class="swiper-wrapper">
     
@@ -200,16 +236,27 @@
               <h3 style="margin-bottom: 3rem; text-align: center;">UWD 5000</h3>
               <div style="text-align: left;">
 
-                <p style="margin-bottom: 3rem;">
+                <p style="margin-bottom: 3rem;" data-lang="de">
                   <strong>Meine Aufgabe:</strong> Solo-Entwicklung (Idee, Programmierung, Assets, Audio)
                 </p>
+                <p style="margin-bottom: 3rem; display: none;" data-lang="en">
+                  <strong>My role:</strong> Solo development (idea, programming, assets, audio)
+                </p>
 
-                <p style="margin-bottom: 3rem;">
+                <p style="margin-bottom: 3rem;" data-lang="de">
                   ist ein Topdown-3D-Zombie-Shooter mit Roguelite-Elementen.
                   Drei unterschiedliche Charaktere – jeweils mit eigenen Werten, Fähigkeiten und Spielstilen – werden in ein futuristisches Hochsicherheitsgefängnis entsandt. 
                   Dort treffen sie auf eine feindliche Umgebung, in der einstige Häftlinge zu mutierten Wesen geworden sind.
                   Der Weg führt durch zufallsgenerierte Areale, in denen es ums Überleben, Ressourcenmanagement und taktisches Vorgehen geht. 
                   Jeder Run stellt neue Herausforderungen, Entscheidungen und Gefahren bereit.
+                </p>
+                
+                <p style="margin-bottom: 3rem; display: none;" data-lang="en">
+                  is a top-down 3D zombie shooter with roguelite elements.
+                  Three unique characters – each with their own stats, abilities, and playstyles – are sent into a futuristic high-security prison.
+                  There they face a hostile environment where former inmates have mutated into dangerous creatures.
+                  The path leads through procedurally generated zones where survival, resource management, and tactical decisions are key.
+                  Every run offers new challenges, decisions, and threats.
                 </p>
                 
               </div>
@@ -232,15 +279,25 @@
               <h3 style="margin-bottom: 3rem; text-align: center;">Rise to King Ortler</h3>
               <div style="text-align: left;">
                 
-                <p style="margin-bottom: 3rem;">
+                <p style="margin-bottom: 3rem;" data-lang="de">
                   <strong>Meine Aufgabe:</strong> Solo-Entwicklung (Idee, Programmierung, Assets, Audio)
                 </p>
+                <p style="margin-bottom: 3rem; display: none;" data-lang="en">
+                  <strong>My role:</strong> Solo development (idea, programming, assets, audio)
+                </p>
 
-                <p style="margin-bottom: 3rem;">
+                <p style="margin-bottom: 3rem;" data-lang="de">
                   Ein taktisches Brettspiel, das klassische Laufspiel-Elemente mit modernen Mechaniken verbindet.
                   Im Zentrum steht Ortler – ein launischer König, der nur den Würdigsten auf seinen Thron lässt.
                   Mit wechselnden Spielplänen, unterschiedlichen Missionszielen und einsetzbaren Items wird jede Runde zu einem neuen Erlebnis.
                   Ob mit List, Glück oder purem Chaos – dein Ziel ist klar: Erobere die Krone.
+                </p>
+                
+                <p style="margin-bottom: 3rem; display: none;" data-lang="en">
+                  A tactical board game that combines classic racing mechanics with modern gameplay elements.
+                  At its center stands Ortler – a moody king who only allows the worthy to claim his throne.
+                  With changing game boards, varying mission objectives, and usable items, each round becomes a unique experience.
+                  Whether through cunning, luck, or pure chaos – your goal is clear: seize the crown.
                 </p>
 
               </div>
@@ -264,7 +321,8 @@
     </section>
     
     <section id="done">
-      <h2>Was habe ich gemacht?</h2>
+      <h2 data-lang="de">Was habe ich gemacht?</h2>
+      <h2 data-lang="en" style="display: none;">What have I made?</h2>
       <div class="swiper swiper-done">
         <div class="swiper-wrapper">
 <!--   
@@ -273,10 +331,24 @@
               <h3 style="margin-bottom: 3rem; text-align: center;">We are Football<br>
                 (Winning Streak Games)</h3>
               <div style="text-align: left;">
-                <p style="margin-bottom: 3rem;"><strong>Meine Aufgabe:</strong> Programmierung</p>
-                <p style="margin-bottom: 3rem;">
-                  Führe deinen Fußballverein zu nationalen Meisterschaften und zu internationalem Ruhm. Übernimm als Manager eine etablierte Frauen- oder 
-                  Männermannschaft deiner Wahl oder führe ein kleines Team zum großen Sport.</p>
+                
+                <p style="margin-bottom: 3rem;" data-lang="de">
+                  <strong>Meine Aufgabe:</strong> Programmierung
+                </p>
+                <p style="margin-bottom: 3rem; display: none;" data-lang="en">
+                  <strong>My role:</strong> programming
+                </p>
+
+                <p style="margin-bottom: 3rem;" data-lang="de">
+                Führe deinen Fußballverein zu nationalen Meisterschaften und zu internationalem Ruhm. 
+                Übernimm als Manager eine etablierte Frauen- oder Männermannschaft deiner Wahl oder führe ein kleines Team zum großen Sport.
+                </p>
+
+                <p style="margin-bottom: 3rem; display: none;" data-lang="en">
+                Lead your football club to national championships and international fame. 
+                Take on the role of manager for a well-established women's or men's team of your choice – or guide a small team to the big leagues.
+                </p>
+
               </div>
               <div style="margin-bottom: 1.2rem; text-align: center;">
                 <a href="https://store.steampowered.com/app/1196470/WE_ARE_FOOTBALL/" target="_blank">
@@ -296,10 +368,22 @@
               <h3 style="margin-bottom: 3rem; text-align: center;">The Innsmouth Case<br>
                 (Robot Pumpkin Games)</h3>
               <div style="text-align: left;">
-                <p style="margin-bottom: 3rem;"><strong>Meine Aufgabe:</strong> Programmierung, Musik, Sound</p>
-                <p style="margin-bottom: 3rem;">
-                  The Innsmouth Case ist ein Text-Adventure-Spiel, inspiriert von den fantastischen Werken der Horrorlegende H.P. Lovecraft. 
-                  Die einzigartige Mischung aus Horror und Humor machen The Innsmouth Case zum ersten Grusel-Comedy-Text-Adventure seiner Art.</p>
+                <p style="margin-bottom: 3rem;" data-lang="de">
+                  <strong>Meine Aufgabe:</strong> Programmierung, Musik, Sound
+                </p>
+                <p style="margin-bottom: 3rem; display: none;" data-lang="en">
+                  <strong>My role:</strong> programming, music, sound
+                </p>
+
+                <p style="margin-bottom: 3rem;" data-lang="de">
+                The Innsmouth Case ist ein Text-Adventure-Spiel, inspiriert von den fantastischen Werken der Horrorlegende H.P. Lovecraft. 
+                Die einzigartige Mischung aus Horror und Humor machen The Innsmouth Case zum ersten Grusel-Comedy-Text-Adventure seiner Art.
+                </p>
+
+                <p style="margin-bottom: 3rem; display: none;" data-lang="en">
+                The Innsmouth Case is a text adventure game inspired by the fantastic works of horror legend H.P. Lovecraft.  
+                Its unique blend of horror and humor makes The Innsmouth Case the first spooky-comedy text adventure of its kind.
+                </p>
               </div>
               <div style="margin-bottom: 1.2rem; text-align: center;">
                 <a href="https://store.steampowered.com/app/1231950/The_Innsmouth_Case/" target="_blank">
@@ -319,11 +403,25 @@
               <h3 style="margin-bottom: 3rem; text-align: center;">Plan B from Outer Space<br>
                 (Robot Pumpkin Games)</h3>
               <div style="text-align: left;">
-                <p style="margin-bottom: 3rem;"><strong>Meine Aufgabe:</strong> Programmierung, Musik, Sound</p>
-                <p style="margin-bottom: 3rem;">
+                
+                <p style="margin-bottom: 3rem;" data-lang="de">
+                  <strong>Meine Aufgabe:</strong> Programmierung, Musik, Sound
+                </p>
+                <p style="margin-bottom: 3rem; display: none;" data-lang="en">
+                  <strong>My role:</strong> programming, music, sound
+                </p>
+
+                <p style="margin-bottom: 3rem;" data-lang="de">
                   Entkomme den Baybaren! Plan B from Outer Space ist ein intergalaktisches Comedy-Abenteuer im Stil eines 
                   interaktiven Buches, inspiriert von klassischen Science-Fiction-Geschichten und bayerischer Kultur. 
-                  Jede deiner Entscheidungen zählt bei der Mission, die Erde unversehrt zu verlassen!</p>
+                  Jede deiner Entscheidungen zählt bei der Mission, die Erde unversehrt zu verlassen!
+                </p>
+                
+                <p style="margin-bottom: 3rem; display: none;" data-lang="en">
+                  Escape the Baybarians! Plan B from Outer Space is an intergalactic comedy adventure in the style of an 
+                  interactive book, inspired by classic science fiction stories and Bavarian culture. 
+                  Every decision you make counts on your mission to leave Earth unharmed!
+                </p>
               </div>
               <div style="margin-bottom: 1.2rem; text-align: center;">
                 <a href="https://store.steampowered.com/app/1683620/Plan_B_from_Outer_Space_A_Bavarian_Odyssey/" target="_blank">
@@ -416,37 +514,57 @@
     
 
     <section id="contact">
-      <h2>Kontakt</h2>
-      <p>Du willst mehr erfahren oder Feedback geben?<br>
-         Klick auf das Icon, um mir zu schreiben:</p>
+      <h2 data-lang="de">Kontakt</h2>
+      <h2 data-lang="en" style="display: none;">Contact</h2>
+      <p data-lang="de">
+        Du willst mehr erfahren oder Feedback geben?<br>
+        Klick auf das Icon, um mir zu schreiben:
+      </p>
+      
+      <p data-lang="en" style="display: none;">
+        Want to learn more or share feedback?<br>
+        Click the icon to send me a message:
+      </p>
       <a href="mailto:AsthaProject@proton.me" target="_blank">
         <img src="Images/Mail_Icon_001.png" alt="E-Mail" style="height: 24px;" title="E-Mail senden">
       </a>
     </section>
     
     <section id="impressum" style="margin-top: 4rem;">
-      <h2>Impressum</h2>
-    
-      <p><strong>Angaben gemäß § 5 TMG / Art. 6 D.Lgs. 70/2003 (Italien)</strong></p>
+      <h2 data-lang="de">Impressum</h2>
+      <h2 data-lang="en" style="display: none;">Legal Notice</h2>
     
       <p>
         René Gamper<br>
-        Bergerweg 10, 39023 Laas<br>
-        Italien (BZ)
+        Via Dei Montanari 10, 39023 Lasa<br>
+        Italy (BZ)
       </p>
     
       <p>
         E-Mail: <a href="mailto:AsthaProject@proton.me">AsthaProject@proton.me</a>
       </p>
     
-      <p style="opacity: 0.85; font-size: 0.9rem;">
+      <p style="opacity: 0.85; font-size: 0.9rem; font-size: 0.8rem;" data-lang="de">
         Diese Website wird von einer Einzelperson mit Wohnsitz in Italien betrieben.<br>
-        Die dargestellten Inhalte und Projekte erfolgen im Rahmen gelegentlicher selbstständiger Arbeit („lavoro occasionale“) und unterliegen derzeit keiner Eintragungspflicht in ein Handelsregister.
-      </p>
-    
-      <p style="opacity: 0.85; font-size: 0.9rem;">
+        Die dargestellten Inhalte und Projekte erfolgen im Rahmen gelegentlicher selbstständiger Arbeit („lavoro occasionale“) 
+        <br>und unterliegen derzeit keiner Eintragungspflicht in ein Handelsregister.
         Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für Inhalte externer Links.  
-        Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+        <br>Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+      </p>
+      
+      <p style="opacity: 0.85; font-size: 0.9rem; display: none; font-size: 0.8rem;" data-lang="en">
+        This website is operated by a private individual residing in Italy.<br>
+        The displayed content and projects are part of occasional self-employed work (“lavoro occasionale”) 
+        <br>and are currently not subject to any commercial registration requirement.
+        Despite careful content control, I assume no liability for the content of external links.  
+        <br>The content of linked pages is the sole responsibility of their respective operators.
+      </p>
+      
+      <p data-lang="de" style="opacity: 0.75; font-size: 0.8rem;">
+        Angaben gemäß § 5 TMG / Art. 6 D.Lgs. 70/2003 (Italien)
+      </p>
+      <p data-lang="en" style="display: none; opacity: 0.75; font-size: 0.8rem;">
+        Information according to § 5 TMG / Art. 6 D.Lgs. 70/2003 (Italy)
       </p>
     </section>
     
@@ -477,6 +595,24 @@
         }
       }
     });
+  </script>
+  <script>
+    let currentLang = 'de';
+  
+    function toggleLanguage() {
+      currentLang = (currentLang === 'de') ? 'en' : 'de';
+      document.getElementById('langSwitch').innerText = currentLang.toUpperCase() === 'DE' ? 'EN' : 'DE';
+  
+      const elements = document.querySelectorAll('[data-lang]');
+  
+      elements.forEach(el => {
+        if (el.getAttribute('data-lang') === currentLang) {
+          el.style.display = '';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+    }
   </script>
 </body>
 </html>
