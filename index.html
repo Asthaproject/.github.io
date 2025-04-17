@@ -174,10 +174,10 @@
     
     <section id="current">
       <h2>Was wird gerade gemacht?</h2>
-      <div class="swiper-current">
+      <div class="swiper swiper-current">
         <div class="swiper-wrapper">
     
-          <div class="swiper-slide" style="width: auto; max-width: 100%;">
+          <div class="swiper-slide">
             <div class="project">
               <h3>UWD 5000</h3>
               <p>Topdown 3D Zombie Shooter im roguelite Stil</p>
@@ -191,7 +191,7 @@
             </div>
           </div>
     
-          <div class="swiper-slide" style="width: auto; max-width: 100%;">
+          <div class="swiper-slide">
             <div class="project">
               <h3>Rise to King Ortler</h3>
               <p>Ein Brettspiel</p>
@@ -206,18 +206,16 @@
           </div>
     
         </div>
-        <div class="swiper-button-next current-next"></div>
-        <div class="swiper-button-prev current-prev"></div>
         <div class="swiper-pagination current-pagination"></div>
       </div>
     </section>
     
     <section id="done">
       <h2>Was habe ich gemacht?</h2>
-      <div class="swiper-done">
+      <div class="swiper swiper-done">
         <div class="swiper-wrapper">
     
-          <div class="swiper-slide" style="width: auto; max-width: 100%;">
+          <div class="swiper-slide">
             <div class="project">
               <h3>We are Football</h3>
               <p>Fußball-Manager im Geiste der Anstoss-Reihe</p>
@@ -231,7 +229,7 @@
             </div>
           </div>
     
-          <div class="swiper-slide" style="width: auto; max-width: 100%;">
+          <div class="swiper-slide">
             <div class="project">
               <h3>The Innsmouth Case</h3>
               <p>Komödiantisches Text-Adventure mit Lovecraft-Charme</p>
@@ -245,7 +243,7 @@
             </div>
           </div>
     
-          <div class="swiper-slide" style="width: auto; max-width: 100%;">
+          <div class="swiper-slide">
             <div class="project">
               <h3>Plan B from Outer Space</h3>
               <p>Interaktives Sci-Fi-Buch mit bayerischem Witz</p>
@@ -260,11 +258,39 @@
           </div>
     
         </div>
-        <div class="swiper-button-next done-next"></div>
-        <div class="swiper-button-prev done-prev"></div>
         <div class="swiper-pagination done-pagination"></div>
       </div>
     </section>
+    
+    <script>
+      new Swiper('.swiper-current', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: false,
+        pagination: {
+          el: '.current-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+        }
+      });
+    
+      new Swiper('.swiper-done', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: false,
+        pagination: {
+          el: '.done-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+        }
+      });
+    </script>
     
     
       <!-- Lightbox Overlay -->
