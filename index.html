@@ -151,6 +151,23 @@
       position: relative;
       z-index: 1;
     }
+
+    .swiper-wrapper {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .swiper-slide {
+      display: flex;
+      height: auto;
+    }
+
+    .project {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
@@ -179,9 +196,22 @@
     
           <div class="swiper-slide">
             <div class="project">
-              <h3 style="margin-bottom: 3rem;">UWD 5000</h3>
-              <p style="margin-bottom: 1rem;">Topdown 3D Zombie Shooter im roguelite Stil</p>
-              <p style="margin-bottom: 3rem;"><strong>Meine Aufgabe:</strong> Solo-Entwicklung (Idee, Programmierung, Assets, Audio)</p>
+              <h3 style="margin-bottom: 3rem; text-align: center;">UWD 5000</h3>
+              <div style="text-align: left;">
+
+                <p style="margin-bottom: 3rem;">
+                  <strong>Meine Aufgabe:</strong> Solo-Entwicklung (Idee, Programmierung, Assets, Audio)
+                </p>
+
+                <p style="margin-bottom: 3rem;">
+                  ist ein Topdown-3D-Zombie-Shooter mit Roguelite-Elementen.
+                  Drei unterschiedliche Charaktere – jeweils mit eigenen Werten, Fähigkeiten und Spielstilen – werden in ein futuristisches Hochsicherheitsgefängnis entsandt. 
+                  Dort treffen sie auf eine feindliche Umgebung, in der einstige Häftlinge zu mutierten Wesen geworden sind.
+                  Der Weg führt durch zufallsgenerierte Areale, in denen es ums Überleben, Ressourcenmanagement und taktisches Vorgehen geht. 
+                  Jeder Run stellt neue Herausforderungen, Entscheidungen und Gefahren bereit.
+                </p>
+                
+              </div>
               <div style="margin-bottom: 1.2rem; text-align: center;">
                 <p style="margin: 0 0 0.3rem 0; font-style: italic; opacity: 0.75;">Demnächst auf Steam verfügbar</p>
                 <img src="Images/Steam_Icon_002.png" alt="Steam bald verfügbar" 
@@ -198,9 +228,21 @@
     
           <div class="swiper-slide">
             <div class="project">
-              <h3 style="margin-bottom: 3rem;">Rise to King Ortler</h3>
-              <p style="margin-bottom: 1rem;">Ein Brettspiel</p>
-              <p style="margin-bottom: 3rem;"><strong>Meine Aufgabe:</strong> Solo-Entwicklung (Idee, Programmierung, Assets, Audio)</p>
+              <h3 style="margin-bottom: 3rem; text-align: center;">Rise to King Ortler</h3>
+              <div style="text-align: left;">
+                
+                <p style="margin-bottom: 3rem;">
+                  <strong>Meine Aufgabe:</strong> Solo-Entwicklung (Idee, Programmierung, Assets, Audio)
+                </p>
+
+                <p style="margin-bottom: 3rem;">
+                  Ein taktisches Brettspiel, das klassische Laufspiel-Elemente mit modernen Mechaniken verbindet.
+                  Im Zentrum steht Ortler – ein launischer König, der nur den Würdigsten auf seinen Thron lässt.
+                  Mit wechselnden Spielplänen, unterschiedlichen Missionszielen und einsetzbaren Items wird jede Runde zu einem neuen Erlebnis.
+                  Ob mit List, Glück oder purem Chaos – dein Ziel ist klar: Erobere die Krone.
+                </p>
+
+              </div>
               <div style="margin-bottom: 1.2rem; text-align: center;">
                 <p style="margin: 0 0 0.3rem 0; font-style: italic; opacity: 0.75;">Demnächst auf Steam verfügbar</p>
                 <img src="Images/Steam_Icon_002.png" alt="Steam bald verfügbar" 
@@ -227,12 +269,19 @@
     
           <div class="swiper-slide">
             <div class="project">
-              <h3 style="margin-bottom: 3rem;">We are Football</h3>
-              <p style="margin-bottom: 1rem;">Fußball-Manager im Geiste der Anstoss-Reihe</p>
-              <p style="margin-bottom: 3rem;"><strong>Meine Aufgabe:</strong> Programmierung</p>
-              <a href="https://store.steampowered.com/app/1196470/WE_ARE_FOOTBALL/" target="_blank">
-                <img src="Images/Steam_Icon_002.png" alt="Steam" style="height: 24px;">
-              </a>
+              <h3 style="margin-bottom: 3rem; text-align: center;">We are Football<br>
+                (Winning Streak Games)</h3>
+              <div style="text-align: left;">
+                <p style="margin-bottom: 3rem;"><strong>Meine Aufgabe:</strong> Programmierung</p>
+                <p style="margin-bottom: 3rem;">
+                  Führe deinen Fußballverein zu nationalen Meisterschaften und zu internationalem Ruhm. Übernimm als Manager eine etablierte Frauen- oder 
+                  Männermannschaft deiner Wahl oder führe ein kleines Team zum großen Sport.</p>
+              </div>
+              <div style="margin-bottom: 1.2rem; text-align: center;">
+                <a href="https://store.steampowered.com/app/1196470/WE_ARE_FOOTBALL/" target="_blank">
+                  <img src="Images/Steam_Icon_002.png" alt="Steam" style="height: 24px;">
+                </a>
+              </div>
               <div class="image-gallery">
                 <img src="Images/WAF_001.jpg" onclick="openLightbox(this.src)" />
                 <img src="Images/WAF_002.jpg" onclick="openLightbox(this.src)" />
@@ -243,12 +292,19 @@
     
           <div class="swiper-slide">
             <div class="project">
-              <h3 style="margin-bottom: 3rem;">The Innsmouth Case</h3>
-              <p style="margin-bottom: 1rem;">Komödiantisches Text-Adventure mit Lovecraft-Charme</p>
-              <p style="margin-bottom: 3rem;"><strong>Meine Aufgabe:</strong> Programmierung, Musik, Sound</p>
-              <a href="https://store.steampowered.com/app/1231950/The_Innsmouth_Case/" target="_blank">
-                <img src="Images/Steam_Icon_002.png" alt="Steam" style="height: 24px;">
-              </a>
+              <h3 style="margin-bottom: 3rem; text-align: center;">The Innsmouth Case<br>
+                (Robot Pumpkin Games)</h3>
+              <div style="text-align: left;">
+                <p style="margin-bottom: 3rem;"><strong>Meine Aufgabe:</strong> Programmierung, Musik, Sound</p>
+                <p style="margin-bottom: 3rem;">
+                  The Innsmouth Case ist ein Text-Adventure-Spiel, inspiriert von den fantastischen Werken der Horrorlegende H.P. Lovecraft. 
+                  Die einzigartige Mischung aus Horror und Humor machen The Innsmouth Case zum ersten Grusel-Comedy-Text-Adventure seiner Art.</p>
+              </div>
+              <div style="margin-bottom: 1.2rem; text-align: center;">
+                <a href="https://store.steampowered.com/app/1231950/The_Innsmouth_Case/" target="_blank">
+                  <img src="Images/Steam_Icon_002.png" alt="Steam" style="height: 24px;">
+                </a>
+              </div>
               <div class="image-gallery">
                 <img src="Images/TIC_001.jpg" onclick="openLightbox(this.src)" />
                 <img src="Images/TIC_002.jpg" onclick="openLightbox(this.src)" />
@@ -259,12 +315,20 @@
     
           <div class="swiper-slide">
             <div class="project">
-              <h3 style="margin-bottom: 3rem;">Plan B from Outer Space</h3>
-              <p style="margin-bottom: 1rem;">Interaktives Sci-Fi-Buch mit bayerischem Witz</p>
-              <p style="margin-bottom: 3rem;"><strong>Meine Aufgabe:</strong> Programmierung, Musik, Sound</p>
-              <a href="https://store.steampowered.com/app/1683620/Plan_B_from_Outer_Space_A_Bavarian_Odyssey/" target="_blank" style="display: inline-block; margin-bottom: 1.2rem;">
-                <img src="Images/Steam_Icon_002.png" alt="Steam" style="height: 24px;">
-              </a>
+              <h3 style="margin-bottom: 3rem; text-align: center;">Plan B from Outer Space<br>
+                (Robot Pumpkin Games)</h3>
+              <div style="text-align: left;">
+                <p style="margin-bottom: 3rem;"><strong>Meine Aufgabe:</strong> Programmierung, Musik, Sound</p>
+                <p style="margin-bottom: 3rem;">
+                  Entkomme den Baybaren! Plan B from Outer Space ist ein intergalaktisches Comedy-Abenteuer im Stil eines 
+                  interaktiven Buches, inspiriert von klassischen Science-Fiction-Geschichten und bayerischer Kultur. 
+                  Jede deiner Entscheidungen zählt bei der Mission, die Erde unversehrt zu verlassen!</p>
+              </div>
+              <div style="margin-bottom: 1.2rem; text-align: center;">
+                <a href="https://store.steampowered.com/app/1683620/Plan_B_from_Outer_Space_A_Bavarian_Odyssey/" target="_blank">
+                  <img src="Images/Steam_Icon_002.png" alt="Steam" style="height: 24px;">
+                </a>
+              </div>
               <div class="image-gallery">
                 <img src="Images/PBFOS_001.jpg" onclick="openLightbox(this.src)" />
                 <img src="Images/PBFOS_002.jpg" onclick="openLightbox(this.src)" />
@@ -277,6 +341,7 @@
         <div class="swiper-pagination done-pagination"></div>
       </div>
     </section>
+    
     
     <script>
       new Swiper('.swiper-current', {
