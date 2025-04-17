@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AsthaProject</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
     :root {
       --text: #fefefe;
@@ -58,7 +59,6 @@
       text-align: center;
       position: relative;
       z-index: 1;
-      overflow-wrap: break-word;
     }
 
     header h1 {
@@ -68,7 +68,6 @@
       letter-spacing: 2px;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
       font-family: 'Acknowledge', serif;
-      word-break: break-word;
     }
 
     nav {
@@ -115,35 +114,32 @@
       margin-bottom: 1rem;
     }
 
-    .project {
+    .swiper {
+      width: 100%;
+      padding: 2rem 0;
+    }
+
+    .swiper-slide {
       background: rgba(255, 255, 255, 0.05);
-      padding: 1.5rem;
       border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
       border: 1px solid rgba(255, 255, 255, 0.1);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-      margin-bottom: 2.5rem;
-      transition: transform 0.3s ease, background 0.3s ease;
     }
 
-    .project:hover {
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.08);
+    .swiper-slide img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
     }
 
-    .project-title {
-      font-size: 1.4rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
+    .swiper-slide h3 {
+      margin: 0.5rem 0 0.2rem;
     }
 
-    .project a {
-      color: var(--text);
-      text-decoration: underline;
-      transition: color 0.3s;
-    }
-
-    .project a:hover {
-      color: var(--accent);
+    .swiper-slide p {
+      font-size: 0.95rem;
     }
 
     footer {
@@ -164,8 +160,8 @@
 
   <nav>
     <a href="#about">Wer bin ich?</a>
-    <a href="#done">Was habe ich gemacht?</a>
     <a href="#current">Was wird gerade gemacht?</a>
+    <a href="#done">Was habe ich gemacht?</a>
     <a href="#contact">Kontakt</a>
   </nav>
 
@@ -175,37 +171,92 @@
       <p>Ich bin ein kreativer Solo-Entwickler, der alles rund ums Game Development liebt – von der ersten Idee bis zur fertigen Umsetzung. Ob Pixel-Art, 3D mit Blender oder einfach nur wildes Rumprobieren: Ich mixe Stile, Tools und Konzepte, wie’s zum Spiel passt.</p>
       <p>Was am Ende zählt? Ein Projekt mit Charakter, das Spaß macht und im Kopf bleibt. Ich bastle ständig an neuen Ideen und bin immer offen für Neues – Hauptsache es wird kreativ.</p>
     </section>
-
-    <section id="done">
-      <h2>Was habe ich gemacht?</h2>
-
-      <div class="project">
-        <div class="project-title">We are Football</div>
-        <p>Ist ein Fußball-Manager Spiel der klassischen Schule, geleitet von Gerald Köhler (Anstoss-Reihe).</p>
-        <p><strong>Meine Aufgabe:</strong> Programmierung</p>
-        <p><strong>Link:</strong> <a href="https://store.steampowered.com/app/1196470/WE_ARE_FOOTBALL/">Steam</a></p>
-      </div>
-
-      <div class="project">
-        <div class="project-title">The Innsmouth Case</div>
-        <p>Ist ein komödiantisches Text-Adventure-Spiel, inspiriert von den fantastischen Werken der Horrorlegende H.P. Lovecraft.</p>
-        <p><strong>Meine Aufgabe:</strong> Programmierung, Musik-Komposition, Sound-Design</p>
-        <p><strong>Link:</strong> <a href="https://store.steampowered.com/app/1231950/The_Innsmouth_Case/">Steam</a></p>
-      </div>
-
-      <div class="project">
-        <div class="project-title">Plan B from Outer Space</div>
-        <p>Ist ein intergalaktisches Comedy-Abenteuer im Stil eines interaktiven Buches.</p>
-        <p><strong>Meine Aufgabe:</strong> Programmierung, Musik-Komposition, Sound-Design</p>
-        <p><strong>Link:</strong> <a href="https://store.steampowered.com/app/1683620/Plan_B_from_Outer_Space_A_Bavarian_Odyssey/">Steam</a></p>
-      </div>
-
-      <p><em>Weitere Projekte folgen...</em></p>
-    </section>
-
+    
     <section id="current">
       <h2>Was wird gerade gemacht?</h2>
       <p>Aktuell arbeite ich an einem neuen Multiplayer-Rundenstrategiespiel mit asymmetrischem Gameplay, einzigartigen Kartenmechaniken und thematisch verrückten Teams.</p>
+    </section>
+
+    <section id="done">
+      <h2>Was habe ich gemacht?</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+    
+          <div class="swiper-slide">
+            <h3>We are Football</h3>
+            <p>Fußball-Manager im Geiste der Anstoss-Reihe</p>
+            <p><strong>Meine Aufgabe:</strong> Programmierung</p>
+            <a href="https://store.steampowered.com/app/1196470/WE_ARE_FOOTBALL/">Steam</a>
+            <div class="swiper inner-gallery">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="Images\WAF_001.jpg" onclick="openLightbox(this.src)" /></div>
+                <div class="swiper-slide"><img src="Images\WAF_002.jpg" onclick="openLightbox(this.src)" /></div>
+                <div class="swiper-slide"><img src="Images\WAF_003.jpg" onclick="openLightbox(this.src)" /></div>
+                <div class="swiper-slide"><img src="Images\WAF_004.jpg" onclick="openLightbox(this.src)" /></div>
+                <div class="swiper-slide"><img src="Images\WAF_005.jpg" onclick="openLightbox(this.src)" /></div>
+                <div class="swiper-slide"><img src="Images\WAF_006.jpg" onclick="openLightbox(this.src)" /></div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="swiper-slide">
+            <h3>The Innsmouth Case</h3>
+            <p>Komödiantisches Text-Adventure mit Lovecraft-Charme</p>
+            <p><strong>Meine Aufgabe:</strong> Code, Musik, Sound</p>
+            <a href="https://store.steampowered.com/app/1231950/The_Innsmouth_Case/">Steam</a>
+            <div class="swiper inner-gallery">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="Images\TIC_001.jpg" onclick="openLightbox(this.src)" /></div>
+                <div class="swiper-slide"><img src="Images\TIC_002.jpg" onclick="openLightbox(this.src)" /></div>
+                <div class="swiper-slide"><img src="Images\TIC_003.jpg" onclick="openLightbox(this.src)" /></div>
+                <div class="swiper-slide"><img src="Images\TIC_004.jpg" onclick="openLightbox(this.src)" /></div>
+                <div class="swiper-slide"><img src="Images\TIC_005.jpg" onclick="openLightbox(this.src)" /></div>
+                <div class="swiper-slide"><img src="Images\TIC_006.jpg" onclick="openLightbox(this.src)" /></div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="swiper-slide">
+            <h3>Plan B from Outer Space</h3>
+            <p>Interaktives Sci-Fi-Buch mit bayerischem Witz</p>
+            <p><strong>Meine Aufgabe:</strong> Code, Musik, Sound</p>
+            <a href="https://store.steampowered.com/app/1683620/Plan_B_from_Outer_Space_A_Bavarian_Odyssey/">Steam</a>
+            <div class="swiper inner-gallery">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="Images\PBFOS_001.jpg" onclick="openLightbox(this.src)" /></div>
+                <div class="swiper-slide"><img src="Images\PBFOS_002.jpg" onclick="openLightbox(this.src)" /></div>
+                <div class="swiper-slide"><img src="Images\PBFOS_003.jpg" onclick="openLightbox(this.src)" /></div>
+                <div class="swiper-slide"><img src="Images\PBFOS_004.jpg" onclick="openLightbox(this.src)" /></div>
+                <div class="swiper-slide"><img src="Images\PBFOS_005.jpg" onclick="openLightbox(this.src)" /></div>
+                <div class="swiper-slide"><img src="Images\PBFOS_006.jpg" onclick="openLightbox(this.src)" /></div>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    
+      <!-- Lightbox Overlay -->
+      <div id="lightbox" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);z-index:9999;justify-content:center;align-items:center;">
+        <img id="lightbox-img" src="" style="max-width:90%;max-height:90%;border-radius:8px;box-shadow:0 0 20px rgba(0,0,0,0.6);" />
+      </div>
+      <script>
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+    
+        function openLightbox(src) {
+          lightboxImg.src = src;
+          lightbox.style.display = "flex";
+        }
+    
+        lightbox.onclick = () => {
+          lightbox.style.display = "none";
+          lightboxImg.src = "";
+        };
+      </script>
     </section>
 
     <section id="contact">
@@ -218,5 +269,30 @@
   <footer>
     &copy; 2025 AsthaProject. Alle Rechte vorbehalten.
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        }
+      }
+    });
+  </script>
 </body>
 </html>
