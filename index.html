@@ -197,11 +197,11 @@
     <a href="#current" data-lang="de">Was wird gerade gemacht?</a>
     <a href="#current" data-lang="en" style="display: none;">What is currently being developed?</a>
     <a href="#done" data-lang="de">Was habe ich gemacht?</a>
-    <a href="#done" data-lang="en">What have I made?</a>
+    <a href="#done" data-lang="en" style="display: none;">What have I made?</a>
     <a href="#contact" data-lang="de">Kontakt</a>
-    <a href="#contact" data-lang="en">Contact</a>
+    <a href="#contact" data-lang="en" style="display: none;">Contact</a>
     <a href="#impressum" data-lang="de">Impressum</a>
-    <a href="#impressum" data-lang="en">Legal Notice</a>
+    <a href="#impressum" data-lang="en" style="display: none;">Legal Notice</a>
     <button onclick="toggleLanguage()" id="langSwitch" style="margin-left: auto;">
       EN
     </button>
@@ -598,14 +598,14 @@
   </script>
   <script>
     let currentLang = 'de';
-  
+
     function toggleLanguage() {
       currentLang = (currentLang === 'de') ? 'en' : 'de';
-      document.getElementById('langSwitch').innerText = currentLang.toUpperCase() === 'DE' ? 'EN' : 'DE';
-  
-      const elements = document.querySelectorAll('[data-lang]');
-  
-      elements.forEach(el => {
+      document.getElementById('langSwitch').innerText = currentLang === 'de' ? 'EN' : 'DE';
+
+      const langElements = document.querySelectorAll('[data-lang]');
+
+      langElements.forEach(el => {
         if (el.getAttribute('data-lang') === currentLang) {
           el.style.display = '';
         } else {
